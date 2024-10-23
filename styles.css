@@ -1,0 +1,365 @@
+/* General Styles */
+body, html {
+    font-family: "Oxanium", sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background: url(https://images.unsplash.com/photo-1652028506778-002ebfd287f1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat center center fixed;
+    background-size: cover;
+    cursor: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2232%22 viewBox=%220 0 24 24%22%3E%3Cpath fill=%22%23FF68E3%22 d=%22M4.5.79v22.42l6.56-6.57h9.29L4.5.79z%22/%3E%3C/svg%3E'), auto;
+}
+
+h2 {
+    color: #ff69b4; 
+    font-weight: 500;
+    margin: 20px;
+    text-align: center;
+}
+
+/* Intro Section */
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    padding: 25px;
+    font-family: 'press start 2p', sans-serif;
+}
+
+.intro-text h1 {
+    font-size: 120px;
+    color: #fffefe;
+    margin: 0;
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    
+}
+
+/* Button Styles */
+button {
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+button:hover {
+    background-color: #FF68E3; /* Girly hover effect */
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(255, 104, 227, 0.5);
+}
+
+.button-container {
+    display: flex;  
+    justify-content: flex-start;
+    gap: 25px;
+}
+
+/* About Me Section */
+.about-me {
+    display: flex;
+    justify-content: center;
+    gap: 23px;
+    color: #f5e4d4;
+    font-size: 20px;
+}
+.about-me h1{
+    font-size: 80px;
+    color: #ffffff;
+    margin: 13px;  
+}
+.about-me h2 { 
+    text-align: left;
+}
+.about-me-text {
+    max-width: 500px;
+    font-size: 22px;
+    
+}
+
+.about-me-img img {
+    width: 400px;
+    height: 400px;
+    border-radius: 30%;
+    padding: 30px;
+    transition: transform 0.5s, box-shadow 0.5s;
+    
+}
+
+.about-me-img img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0);
+}
+
+/* Technical Skills Section */
+.technical-skills h2 {
+    padding: 50px;
+    color: #e6cfcf;
+    text-align: left;
+}
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.carousel-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 26px;
+    animation: scroll 25s linear infinite;
+    list-style: none;
+}
+
+.skill-item {
+    font-size: 80px;
+    color: #f5e4d4;
+    transition: transform 0.5s, color 0.5s;
+}
+
+.skill-item:hover {
+    transform: scale(1.2);
+    color: #FF68E3;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Main container for both sections */
+.skills-languages-container {
+    display: flex; /* Flexbox layout */
+    justify-content: space-evenly; /* Space between the sections */
+    padding: 20px;
+    align-items: justify; /* Aligns items at the top */
+}
+
+/* Other Skills Section on the left */
+.skills {
+    display: grid;
+    grid-template-columns: 1fr; /* Stack cards vertically */
+    gap: 20px;
+    text-align: left;
+}
+
+/* Adjust the left column for smaller Other Skills cards */
+.skill-card {
+    background-color: rgba(54, 51, 51, 0.534);
+    color: #dddcd1;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(255, 104, 227, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.skill-card img {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 5px;
+    
+}
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 104, 227, 0.7);
+}
+
+/* Languages Section on the right */
+.skills h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #cacab8;
+}
+
+
+/* Languages boxes */
+.languages {
+    display: flex; /* Flexbox for row layout */
+    gap: 25px; /* Space between language boxes */
+    justify-content: center; /* Centers the language boxes horizontally */
+    align-items: center; /* Aligns boxes vertically in the middle */
+    text-align: center;
+    color: #f5e4d4;
+    font-size: 19px;
+}
+
+/* Language box styling */
+.language-box {
+    width: 90px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.language-progress {
+    background-color: #979797;
+    border-radius: 5px;
+    width: 100%;
+    height: 8px;
+}
+
+.language-progress-bar {
+    height: 100%;
+    background-color: #6dff68;
+    border-radius: 5px;
+}
+
+/* Interests Section */
+/* Main container for the interests section */
+.interests-container {
+    padding: 40px;
+}
+
+/* Heading aligned to the left */
+.interests-container h1 {
+    color: #f5e4d4;
+    text-align: left; /* Align the h1 to the left */
+    margin-bottom: 20px; /* Space between h1 and interest cards */
+}
+
+/* Interest cards grid layout */
+.interests {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Flexible grid layout for horizontal display */
+    gap: 20px; /* Space between interest items */
+    justify-content: start; /* Align to the left */
+}
+
+/* Individual interest card styling */
+.interest-item {
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    color: #f5e4d4;
+    background-color: #cfcaca57;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Reduce size of images */
+.interest-item img {
+    width: 100px; /* Smaller image size */
+    height: 100px; /* Maintain aspect ratio */
+    border-radius: 35%;
+    margin-bottom: 5px;
+}
+
+/* Hover effect for interest items */
+.interest-item:hover {
+    transform: scale(1.05); /* Slight hover scaling */
+    box-shadow: 0 6px 12px rgba(255, 104, 227, 0.7);
+}
+
+
+
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+        clip: rect(24px, 9999px, 56px, 0);
+    }
+    10% {
+        transform: translate(-2px, 2px);
+        clip: rect(75px, 9999px, 95px, 0);
+    }
+    20% {
+        transform: translate(2px, -2px);
+        clip: rect(50px, 9999px, 85px, 0);
+    }
+    30% {
+        transform: translate(-1px, 1px);
+        clip: rect(10px, 9999px, 40px, 0);
+    }
+    40% {
+        transform: translate(1px, -1px);
+        clip: rect(0px, 9999px, 25px, 0);
+    }
+    50% {
+        transform: translate(1px, 0);
+        clip: rect(65px, 9999px, 95px, 0);
+    }
+    60% {
+        transform: translate(0);
+        clip: rect(15px, 9999px, 45px, 0);
+    }
+    70% {
+        transform: translate(-1px, -1px);
+        clip: rect(45px, 9999px, 75px, 0);
+    }
+    80% {
+        transform: translate(2px, 2px);
+        clip: rect(85px, 9999px, 105px, 0);
+    }
+    90% {
+        transform: translate(-1px, -2px);
+        clip: rect(35px, 9999px, 65px, 0);
+    }
+    100% {
+        transform: translate(0);
+        clip: rect(0px, 9999px, 25px, 0);
+    }
+}
+
+/* Glitch effect on hover */
+@keyframes glitch-hover {
+    0% {
+        transform: translate(0);
+        clip: rect(0, 9999px, 56px, 0);
+    }
+    25% {
+        transform: translate(1px, -1px);
+        clip: rect(30px, 9999px, 90px, 0);
+    }
+    50% {
+        transform: translate(-2px, 1px);
+        clip: rect(50px, 9999px, 120px, 0);
+    }
+    75% {
+        transform: translate(1px, 0);
+        clip: rect(0px, 9999px, 40px, 0);
+    }
+    100% {
+        transform: translate(0);
+        clip: rect(10px, 9999px, 70px, 0);
+    }
+}
+
+/* Glitch Text Styling */
+.glitch-text {
+    font-size: 3rem; /* Adjust based on your needs */
+    font-weight: 700;
+    color: #ff69b4; /* Pink text */
+    position: relative;
+    display: inline-block;
+    animation: glitch 1.5s infinite linear;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+}
+
+/* Pink and Green Pixel Layers */
+.glitch-text::before {
+    left: 2px;
+    text-shadow: -2px 0 #00ff00; /* Green pixel glitch */
+    clip: rect(10px, 9999px, 70px, 0);
+    animation: glitch 2s infinite ease-in-out;
+}
+
+.glitch-text::after {
+    left: -2px;
+    text-shadow: -2px 0 #ff69b4; /* Pink pixel glitch */
+    clip: rect(15px, 9999px, 60px, 0);
+    animation: glitch-hover 1s infinite ease-in-out;
+}
+
+.glitch-text:hover {
+    animation: glitch-hover 0.5s infinite;
+}
